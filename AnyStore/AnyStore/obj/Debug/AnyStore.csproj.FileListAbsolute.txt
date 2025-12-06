@@ -1,2 +1,11 @@
 C:\Users\mihir\AppData\Local\Temporary Projects\AnyStore\bin\Debug\AnyStore.exe.config
 C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\bin\Debug\AnyStore.exe.config
+C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\bin\Debug\AnyStore.exe
+C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\bin\Debug\AnyStore.pdb
+C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\obj\Debug\AnyStore.csprojResolveAssemblyReference.cache
+C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\obj\Debug\AnyStore.frmAdminDashboard.resources
+C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\obj\Debug\AnyStore.Properties.Resources.resources
+C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\obj\Debug\AnyStore.csproj.GenerateResource.Cache
+C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\obj\Debug\AnyStore.exe
+C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\obj\Debug\AnyStore.pdb
+C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\obj\Debug\AnyStore.frmUserDashboard.resources
