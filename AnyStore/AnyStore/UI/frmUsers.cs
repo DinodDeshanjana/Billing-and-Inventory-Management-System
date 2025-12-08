@@ -51,7 +51,8 @@ namespace AnyStore.UI
             if (success == true)
             {
                 MessageBox.Show("User successfully created.");
-            }else
+                clear();
+            } else
             {
                 MessageBox.Show("Failed to add new user");
             }
@@ -64,6 +65,20 @@ namespace AnyStore.UI
         {
             DataTable dt = dal.Select();
             dgvUsers.DataSource = dt;
+        }
+
+        private void clear()
+        {
+            txtUserID.Text = "";
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtEmail.Text = "";
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            txtContact.Text = "";
+            txtAddress.Text = "";
+            cmbGender.Text = "";
+            cmbUserType.Text = "";
         }
     }
 }
