@@ -181,6 +181,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAdminDashboard_FormClosed);
             this.PanelFooter.ResumeLayout(false);
             this.PanelFooter.PerformLayout();
             this.menuStrip1.ResumeLayout(false);

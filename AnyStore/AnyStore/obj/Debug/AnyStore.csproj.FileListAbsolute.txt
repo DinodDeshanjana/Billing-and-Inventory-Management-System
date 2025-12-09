@@ -10,3 +10,4 @@ C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Bi
 C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\obj\Debug\AnyStore.pdb
 C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\obj\Debug\AnyStore.frmUserDashboard.resources
 C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\obj\Debug\AnyStore.UI.frmUsers.resources
+C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\obj\Debug\AnyStore.UI.frmLogin.resources

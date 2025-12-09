@@ -405,6 +405,7 @@
             this.Name = "frmUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Users";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmUsers_FormClosed);
             this.Load += new System.EventHandler(this.frmUsers_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
