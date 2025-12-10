@@ -102,7 +102,7 @@ namespace AnyStore.DAL
 
             try
             {
-                string sql = "UPDATE tbl_products  SET name=@name, category=@category, discription=@discription, rate=@rate, qty=@qty, added_date=@added_date, added_by=@added_by WHERE id=@id";
+                string sql = "UPDATE tbl_products  SET name=@name, category=@category, discription=@discription, rate=@rate,  added_date=@added_date, added_by=@added_by WHERE id=@id";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
@@ -177,6 +177,35 @@ namespace AnyStore.DAL
             }
 
             return isSuccess;
+        }
+        #endregion
+        #region Search Method for product Module
+        public DataTable Search(String keywords)
+        {
+            SqlConnection conn = new SqlConnection(myconnstrng);
+
+            DataTable dt = new DataTable();
+
+            try
+            {
+                string sql = "SELECT * FROM tbl_products WHERE id LIKE '%"+keywords+"%' OR name LIKE '%"+keywords+"%' OR category LIKE '%"+keywords+"%'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                conn.Open();
+
+                adapter.Fill(dt);
+
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return dt;
         }
         #endregion
     }

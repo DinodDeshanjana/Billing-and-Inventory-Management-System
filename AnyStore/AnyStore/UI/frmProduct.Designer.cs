@@ -40,7 +40,7 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
-            this.tctDescription = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtRate = new System.Windows.Forms.TextBox();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -159,17 +159,17 @@
             this.cmbCategory.FormattingEnabled = true;
             this.cmbCategory.Location = new System.Drawing.Point(191, 217);
             this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(121, 31);
+            this.cmbCategory.Size = new System.Drawing.Size(207, 31);
             this.cmbCategory.TabIndex = 10;
             // 
-            // tctDescription
+            // txtDescription
             // 
-            this.tctDescription.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tctDescription.Location = new System.Drawing.Point(191, 287);
-            this.tctDescription.Multiline = true;
-            this.tctDescription.Name = "tctDescription";
-            this.tctDescription.Size = new System.Drawing.Size(207, 85);
-            this.tctDescription.TabIndex = 11;
+            this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Location = new System.Drawing.Point(191, 287);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(207, 85);
+            this.txtDescription.TabIndex = 11;
             // 
             // txtRate
             // 
@@ -187,6 +187,7 @@
             this.dgvProducts.RowTemplate.Height = 24;
             this.dgvProducts.Size = new System.Drawing.Size(775, 287);
             this.dgvProducts.TabIndex = 13;
+            this.dgvProducts.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProducts_RowHeaderMouseClick);
             // 
             // txtSearch
             // 
@@ -195,6 +196,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(344, 30);
             this.txtSearch.TabIndex = 15;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // lblSearch
             // 
@@ -218,6 +220,7 @@
             this.btnDelete.TabIndex = 32;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -231,6 +234,7 @@
             this.btnUpdate.TabIndex = 31;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -244,6 +248,7 @@
             this.btnAdd.TabIndex = 30;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // frmProduct
             // 
@@ -257,7 +262,7 @@
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.dgvProducts);
             this.Controls.Add(this.txtRate);
-            this.Controls.Add(this.tctDescription);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.cmbCategory);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtID);
@@ -294,7 +299,7 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.ComboBox cmbCategory;
-        private System.Windows.Forms.TextBox tctDescription;
+        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.TextBox txtRate;
         private System.Windows.Forms.DataGridView dgvProducts;
         private System.Windows.Forms.TextBox txtSearch;
