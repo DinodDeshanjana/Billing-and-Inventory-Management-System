@@ -37,7 +37,7 @@
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.labelLoginuser = new System.Windows.Forms.Label();
+            this.lblLoginuser = new System.Windows.Forms.Label();
             this.labelAppname = new System.Windows.Forms.Label();
             this.labelAppname2 = new System.Windows.Forms.Label();
             this.labelAppheading = new System.Windows.Forms.Label();
@@ -122,16 +122,15 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "User:";
             // 
-            // labelLoginuser
+            // lblLoginuser
             // 
-            this.labelLoginuser.AutoSize = true;
-            this.labelLoginuser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoginuser.ForeColor = System.Drawing.Color.OrangeRed;
-            this.labelLoginuser.Location = new System.Drawing.Point(97, 82);
-            this.labelLoginuser.Name = "labelLoginuser";
-            this.labelLoginuser.Size = new System.Drawing.Size(185, 28);
-            this.labelLoginuser.TabIndex = 3;
-            this.labelLoginuser.Text = "Dinod Deshanjana";
+            this.lblLoginuser.AutoSize = true;
+            this.lblLoginuser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginuser.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblLoginuser.Location = new System.Drawing.Point(108, 82);
+            this.lblLoginuser.Name = "lblLoginuser";
+            this.lblLoginuser.Size = new System.Drawing.Size(0, 28);
+            this.lblLoginuser.TabIndex = 3;
             // 
             // labelAppname
             // 
@@ -172,7 +171,7 @@
             this.Controls.Add(this.labelAppheading);
             this.Controls.Add(this.labelAppname2);
             this.Controls.Add(this.labelAppname);
-            this.Controls.Add(this.labelLoginuser);
+            this.Controls.Add(this.lblLoginuser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PanelFooter);
             this.Controls.Add(this.menuStrip1);
@@ -182,6 +181,7 @@
             this.Text = "Admin Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAdminDashboard_FormClosed);
+            this.Load += new System.EventHandler(this.frmAdminDashboard_Load);
             this.PanelFooter.ResumeLayout(false);
             this.PanelFooter.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -202,7 +202,7 @@
         private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transactionsToolStripMenuItem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelLoginuser;
+        private System.Windows.Forms.Label lblLoginuser;
         private System.Windows.Forms.Label labelAppname;
         private System.Windows.Forms.Label labelAppname2;
         private System.Windows.Forms.Label labelAppheading;

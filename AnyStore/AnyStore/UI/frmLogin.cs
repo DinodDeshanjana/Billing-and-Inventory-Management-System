@@ -21,6 +21,7 @@ namespace AnyStore.UI
 
         loginBLL l = new loginBLL();
         loginDAL dal = new loginDAL();
+        public static string loggedIn;
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -39,6 +40,8 @@ namespace AnyStore.UI
             if (success == true)
             {
                 MessageBox.Show("Login Sucessful.");
+                loggedIn = l.username;
+
 
                 switch (l.user_type)
                 {

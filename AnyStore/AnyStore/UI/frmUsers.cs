@@ -34,6 +34,9 @@ namespace AnyStore.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+
+           
+
             u.first_name = txtFirstName.Text;
             u.last_name = txtLastName.Text;
             u.email = txtEmail.Text;
@@ -44,7 +47,11 @@ namespace AnyStore.UI
             u.gender = cmbGender.Text;
             u.user_type = cmbUserType.Text;
             u.added_date = DateTime.Now;
-            u.added_by = 1;
+
+            string loggedUser = frmLogin.loggedIn;
+            userBLL usr = dal.GetIDfromUsername(loggedUser);
+
+            u.added_by = usr.id;
 
             bool success = dal.Insert(u);
 
@@ -167,9 +174,7 @@ namespace AnyStore.UI
 
         private void frmUsers_FormClosed(object sender, FormClosedEventArgs e)
         {
-            frmLogin login = new frmLogin();
-            login.Show();
-            this.Hide();
+            
         }
     }
 }

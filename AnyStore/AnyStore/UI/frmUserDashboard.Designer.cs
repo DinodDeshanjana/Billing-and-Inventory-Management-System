@@ -35,7 +35,7 @@
             this.labelAppheading = new System.Windows.Forms.Label();
             this.labelAppname2 = new System.Windows.Forms.Label();
             this.labelAppname = new System.Windows.Forms.Label();
-            this.labelLoginuser = new System.Windows.Forms.Label();
+            this.lblLoginuser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PanelFooter = new System.Windows.Forms.Panel();
             this.label1Footer = new System.Windows.Forms.Label();
@@ -91,7 +91,7 @@
             this.labelAppname2.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAppname2.Location = new System.Drawing.Point(1004, 374);
             this.labelAppname2.Name = "labelAppname2";
-            this.labelAppname2.Size = new System.Drawing.Size(124, 46);
+            this.labelAppname2.Size = new System.Drawing.Size(122, 45);
             this.labelAppname2.TabIndex = 11;
             this.labelAppname2.Text = "STORE";
             // 
@@ -101,26 +101,25 @@
             this.labelAppname.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAppname.Location = new System.Drawing.Point(923, 374);
             this.labelAppname.Name = "labelAppname";
-            this.labelAppname.Size = new System.Drawing.Size(86, 46);
+            this.labelAppname.Size = new System.Drawing.Size(84, 45);
             this.labelAppname.TabIndex = 10;
             this.labelAppname.Text = "ANY";
             // 
-            // labelLoginuser
+            // lblLoginuser
             // 
-            this.labelLoginuser.AutoSize = true;
-            this.labelLoginuser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoginuser.ForeColor = System.Drawing.Color.OrangeRed;
-            this.labelLoginuser.Location = new System.Drawing.Point(72, 41);
-            this.labelLoginuser.Name = "labelLoginuser";
-            this.labelLoginuser.Size = new System.Drawing.Size(185, 28);
-            this.labelLoginuser.TabIndex = 9;
-            this.labelLoginuser.Text = "Dinod Deshanjana";
+            this.lblLoginuser.AutoSize = true;
+            this.lblLoginuser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginuser.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblLoginuser.Location = new System.Drawing.Point(101, 42);
+            this.lblLoginuser.Name = "lblLoginuser";
+            this.lblLoginuser.Size = new System.Drawing.Size(0, 28);
+            this.lblLoginuser.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 41);
+            this.label1.Location = new System.Drawing.Point(18, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 28);
             this.label1.TabIndex = 8;
@@ -155,7 +154,7 @@
             this.Controls.Add(this.labelAppheading);
             this.Controls.Add(this.labelAppname2);
             this.Controls.Add(this.labelAppname);
-            this.Controls.Add(this.labelLoginuser);
+            this.Controls.Add(this.lblLoginuser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PanelFooter);
             this.Controls.Add(this.menuStripTop);
@@ -164,6 +163,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmUserDashboard_FormClosed);
+            this.Load += new System.EventHandler(this.frmUserDashboard_Load);
             this.menuStripTop.ResumeLayout(false);
             this.menuStripTop.PerformLayout();
             this.PanelFooter.ResumeLayout(false);
@@ -182,7 +183,7 @@
         private System.Windows.Forms.Label labelAppheading;
         private System.Windows.Forms.Label labelAppname2;
         private System.Windows.Forms.Label labelAppname;
-        private System.Windows.Forms.Label labelLoginuser;
+        private System.Windows.Forms.Label lblLoginuser;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel PanelFooter;
         private System.Windows.Forms.Label label1Footer;
