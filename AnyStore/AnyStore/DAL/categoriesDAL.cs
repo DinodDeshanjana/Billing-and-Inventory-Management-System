@@ -27,9 +27,9 @@ namespace AnyStore.DAL
                 string sql = "SELECT * FROM tbl_categories";
 
 
-                SqlCommand cmd = new SqlCommand();
+                SqlCommand cmd = new SqlCommand(sql,conn);
 
-                SqlDataAdapter adapter = new SqlDataAdapter();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 conn.Open();
 
                 adapter.Fill(dt);
@@ -55,12 +55,12 @@ namespace AnyStore.DAL
 
             try
             {
-                string sql = "INSERT INTO tbl_categories (title, description, added_date, added_by) VALUES (@title, @description, @added_date, @added_by)";
+                string sql = "INSERT INTO tbl_categories (title, discription, added_date, added_by) VALUES (@title, @discription, @added_date, @added_by)";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
                 cmd.Parameters.AddWithValue("@title", c.title);
-                cmd.Parameters.AddWithValue("@description", c.description);
+                cmd.Parameters.AddWithValue("@discription", c.discription);
                 cmd.Parameters.AddWithValue("@added_date", c.added_date);
                 cmd.Parameters.AddWithValue("@added_by", c.added_by);
 
@@ -97,12 +97,12 @@ namespace AnyStore.DAL
 
             try
             {
-                string sql = "UPDATE tbl_categories SET title=@title, description=@description, added_date=@added_date, added_by=@added_by WHERE id=@id";
+                string sql = "UPDATE tbl_categories SET title=@title, discription=@discription, added_date=@added_date, added_by=@added_by WHERE id=@id";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
                 cmd.Parameters.AddWithValue("title", c.title);
-                cmd.Parameters.AddWithValue("description", c.description);
+                cmd.Parameters.AddWithValue("discription", c.discription);
                 cmd.Parameters.AddWithValue("added_date", c.added_date);
                 cmd.Parameters.AddWithValue("added_by", c.added_by);
                 cmd.Parameters.AddWithValue("@id", c.id);
