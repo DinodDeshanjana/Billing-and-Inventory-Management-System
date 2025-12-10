@@ -41,5 +41,11 @@ namespace AnyStore
             frmCategories category = new frmCategories();
             category.Show();
         }
+
+        private void productsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProduct product = new frmProduct();
+            product.Show();
+        }
     }
 }
