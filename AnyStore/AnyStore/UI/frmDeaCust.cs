@@ -132,5 +132,21 @@ namespace AnyStore.UI
                 MessageBox.Show("Failed to Delete Dealer or Customer.");
             }
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string keywords = txtSearch.Text;
+
+            if (keywords != null)
+            {
+                DataTable dt = dcDal.Search(keywords);
+                dgvDeaCust.DataSource = dt;
+            }
+            else
+            {
+                DataTable dt = dcDal.Select();
+                dgvDeaCust.DataSource = dt;
+            }
+        }
     }
 }

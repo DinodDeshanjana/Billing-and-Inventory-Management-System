@@ -180,5 +180,37 @@ namespace AnyStore.DAL
             return isSuccess;
         }
         #endregion
+        #region SEARCH Method for Dealer and Customer Module
+        public DataTable Search(string keywords)
+        {
+            SqlConnection conn = new SqlConnection(myconnstrng);
+
+            DataTable dt = new DataTable();
+
+            try
+            {
+                string sql = "SELECT * FROM tbl_dea_cust WHERE ID like '%"+keywords+"%' OR type LIKE '%"+keywords+"%' OR name LIKE '%"+keywords+"%' ";
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+                conn.Open();
+
+                adapter.Fill(dt);
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return dt;
+        }
+        #endregion
     }
 }
