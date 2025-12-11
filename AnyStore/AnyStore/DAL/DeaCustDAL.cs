@@ -56,7 +56,7 @@ namespace AnyStore.DAL
 
             try
             {
-                string sql = "INSERT INTO tbl_dea_cust (type, name,email,contact,address,added_date, added_by) VALUES (@type, @name,@email,@contact,@address,@added_date, @added_by) WHERE id=@id";
+                string sql = "INSERT INTO tbl_dea_cust (type, name,email,contact,address,added_date, added_by) VALUES (@type, @name,@email,@contact,@address,@added_date, @added_by)";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
@@ -149,7 +149,7 @@ namespace AnyStore.DAL
 
             try
             {
-                string sql = "DELETE * FROM tbl_dea_cust WHERE  id=@id";
+                string sql = "DELETE FROM tbl_dea_cust WHERE  id=@id";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
 

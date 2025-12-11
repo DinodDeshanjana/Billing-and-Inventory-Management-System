@@ -214,6 +214,7 @@
             this.btnDelete.TabIndex = 35;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -227,6 +228,7 @@
             this.btnUpdate.TabIndex = 34;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -240,6 +242,7 @@
             this.btnAdd.TabIndex = 33;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dgvDeaCust
             // 
@@ -249,6 +252,7 @@
             this.dgvDeaCust.RowTemplate.Height = 24;
             this.dgvDeaCust.Size = new System.Drawing.Size(793, 337);
             this.dgvDeaCust.TabIndex = 36;
+            this.dgvDeaCust.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDeaCust_RowHeaderMouseClick);
             // 
             // txtSearch
             // 
@@ -297,6 +301,7 @@
             this.Name = "frmDeaCust";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDeaCust";
+            this.Load += new System.EventHandler(this.frmDeaCust_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
