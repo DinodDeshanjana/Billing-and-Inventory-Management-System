@@ -175,7 +175,7 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(90, 108);
+            this.txtName.Location = new System.Drawing.Point(94, 108);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(269, 30);
             this.txtName.TabIndex = 8;
@@ -183,7 +183,7 @@
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(90, 45);
+            this.txtSearch.Location = new System.Drawing.Point(94, 45);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(269, 30);
             this.txtSearch.TabIndex = 7;
@@ -309,15 +309,15 @@
             // txtInventory
             // 
             this.txtInventory.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInventory.Location = new System.Drawing.Point(823, 49);
+            this.txtInventory.Location = new System.Drawing.Point(847, 49);
             this.txtInventory.Name = "txtInventory";
-            this.txtInventory.Size = new System.Drawing.Size(255, 30);
+            this.txtInventory.Size = new System.Drawing.Size(223, 30);
             this.txtInventory.TabIndex = 8;
             // 
             // txtNameProduct
             // 
             this.txtNameProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameProduct.Location = new System.Drawing.Point(425, 51);
+            this.txtNameProduct.Location = new System.Drawing.Point(444, 51);
             this.txtNameProduct.Name = "txtNameProduct";
             this.txtNameProduct.Size = new System.Drawing.Size(303, 30);
             this.txtNameProduct.TabIndex = 7;
@@ -325,7 +325,7 @@
             // txtSearchProduct
             // 
             this.txtSearchProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchProduct.Location = new System.Drawing.Point(88, 51);
+            this.txtSearchProduct.Location = new System.Drawing.Point(94, 51);
             this.txtSearchProduct.Name = "txtSearchProduct";
             this.txtSearchProduct.Size = new System.Drawing.Size(269, 30);
             this.txtSearchProduct.TabIndex = 6;
@@ -355,7 +355,7 @@
             // 
             this.lblInventory.AutoSize = true;
             this.lblInventory.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInventory.Location = new System.Drawing.Point(734, 54);
+            this.lblInventory.Location = new System.Drawing.Point(754, 54);
             this.lblInventory.Name = "lblInventory";
             this.lblInventory.Size = new System.Drawing.Size(85, 23);
             this.lblInventory.TabIndex = 3;
@@ -365,7 +365,7 @@
             // 
             this.lblProductName.AutoSize = true;
             this.lblProductName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductName.Location = new System.Drawing.Point(363, 52);
+            this.lblProductName.Location = new System.Drawing.Point(378, 52);
             this.lblProductName.Name = "lblProductName";
             this.lblProductName.Size = new System.Drawing.Size(56, 23);
             this.lblProductName.TabIndex = 2;

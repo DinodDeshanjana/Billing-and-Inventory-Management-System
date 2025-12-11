@@ -46,7 +46,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnLogin.BackColor = System.Drawing.Color.BlueViolet;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -125,7 +125,7 @@
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Segoe UI Black", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblHeader.ForeColor = System.Drawing.Color.BlueViolet;
             this.lblHeader.Location = new System.Drawing.Point(710, 50);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(144, 51);
@@ -155,7 +155,7 @@
             // 
             // PanelFooter
             // 
-            this.PanelFooter.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.PanelFooter.BackColor = System.Drawing.Color.BlueViolet;
             this.PanelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanelFooter.Location = new System.Drawing.Point(0, 533);
             this.PanelFooter.Name = "PanelFooter";
