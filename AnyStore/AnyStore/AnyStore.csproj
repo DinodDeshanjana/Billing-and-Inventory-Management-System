@@ -48,10 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\categoriesBLL.cs" />
+    <Compile Include="BLL\DeaCustBLL.cs" />
     <Compile Include="BLL\loginBLL.cs" />
     <Compile Include="BLL\productsBLL.cs" />
     <Compile Include="BLL\userBLL.cs" />
     <Compile Include="DAL\categoriesDAL.cs" />
+    <Compile Include="DAL\DeaCustDAL.cs" />
     <Compile Include="DAL\loginDAL.cs" />
     <Compile Include="DAL\productDAL.cs" />
     <Compile Include="DAL\userDAL.cs" />
@@ -66,6 +68,12 @@
     </Compile>
     <Compile Include="UI\frmCategories.Designer.cs">
       <DependentUpon>frmCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmDeaCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmDeaCust.Designer.cs">
+      <DependentUpon>frmDeaCust.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmLogin.cs">
       <SubType>Form</SubType>
@@ -98,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmCategories.resx">
       <DependentUpon>frmCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmDeaCust.resx">
+      <DependentUpon>frmDeaCust.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

@@ -13,3 +13,4 @@ C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Bi
 C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\obj\Debug\AnyStore.UI.frmLogin.resources
 C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\obj\Debug\AnyStore.UI.frmCategories.resources
 C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\obj\Debug\AnyStore.UI.frmProduct.resources
+C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\obj\Debug\AnyStore.UI.frmDeaCust.resources

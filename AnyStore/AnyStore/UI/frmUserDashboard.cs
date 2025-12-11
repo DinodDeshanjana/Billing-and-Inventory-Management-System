@@ -29,5 +29,11 @@ namespace AnyStore
             login.Show();
             this.Hide();
         }
+
+        private void delaerAndCutomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDeaCust DeaCust = new frmDeaCust();
+            DeaCust.Show();
+        }
     }
 }

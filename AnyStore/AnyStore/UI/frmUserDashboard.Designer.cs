@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.PanelFooter = new System.Windows.Forms.Panel();
             this.label1Footer = new System.Windows.Forms.Label();
+            this.delaerAndCutomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripTop.SuspendLayout();
             this.PanelFooter.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +50,8 @@
             this.menuStripTop.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.purchaseToolStripMenuItem,
             this.salesFormsToolStripMenuItem,
-            this.inventoryToolStripMenuItem});
+            this.inventoryToolStripMenuItem,
+            this.delaerAndCutomerToolStripMenuItem});
             this.menuStripTop.Location = new System.Drawing.Point(0, 0);
             this.menuStripTop.Name = "menuStripTop";
             this.menuStripTop.Size = new System.Drawing.Size(1505, 28);
@@ -146,6 +148,13 @@
             this.label1Footer.TabIndex = 0;
             this.label1Footer.Text = "Developed By: Dinod Deshanjana";
             // 
+            // delaerAndCutomerToolStripMenuItem
+            // 
+            this.delaerAndCutomerToolStripMenuItem.Name = "delaerAndCutomerToolStripMenuItem";
+            this.delaerAndCutomerToolStripMenuItem.Size = new System.Drawing.Size(155, 24);
+            this.delaerAndCutomerToolStripMenuItem.Text = "Delaer and Cutomer";
+            this.delaerAndCutomerToolStripMenuItem.Click += new System.EventHandler(this.delaerAndCutomerToolStripMenuItem_Click);
+            // 
             // frmUserDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -187,5 +196,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel PanelFooter;
         private System.Windows.Forms.Label label1Footer;
+        private System.Windows.Forms.ToolStripMenuItem delaerAndCutomerToolStripMenuItem;
     }
 }
