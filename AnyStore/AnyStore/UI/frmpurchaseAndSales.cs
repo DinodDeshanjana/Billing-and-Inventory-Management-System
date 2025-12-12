@@ -34,6 +34,7 @@ namespace AnyStore.UI
 
         DataTable transactionDT = new DataTable();
 
+
         private void frmpurchaseAndSales_Load(object sender, EventArgs e)
         {
             string type = frmUserDashboard.transactionType;
@@ -117,41 +118,47 @@ namespace AnyStore.UI
                 txtQty.Text = "0.00";
             }
         }
+        private void CalculateFinalTotal()
+        {
+            // 1. Safe variables to store our numbers (default is 0)
+            decimal subTotal = 0;
+            decimal discountPercent = 0;
+            decimal vatPercent = 0;
 
+            // 2. Safely try to get the numbers. 
+            // If the text box is empty or has letters, these will stay 0.
+            decimal.TryParse(txtSubTotal.Text, out subTotal);
+            decimal.TryParse(txtDiscount.Text, out discountPercent);
+            decimal.TryParse(txtVat.Text, out vatPercent);
+
+            // 3. Calculate Discount Amount
+            // Example: 1000 * 10 / 100 = 100
+            decimal discountAmount = (subTotal * discountPercent) / 100;
+
+            // 4. Calculate Price After Discount
+            // Example: 1000 - 100 = 900
+            decimal priceAfterDiscount = subTotal - discountAmount;
+
+            // 5. Calculate VAT on the discounted price
+            // Example: 900 * 5 / 100 = 45
+            decimal vatAmount = (priceAfterDiscount * vatPercent) / 100;
+
+            // 6. Final Grand Total
+            // Example: 900 + 45 = 945
+            decimal grandTotal = priceAfterDiscount + vatAmount;
+
+            // 7. Show the result
+            // "N2" formats it to 2 decimal places (e.g., 945.00)
+            txtGrandTotal.Text = grandTotal.ToString("N2");
+        }
         private void txtDiscount_TextChanged(object sender, EventArgs e)
         {
-            string value = txtDiscount.Text;
-
-            if (value == "")
-            {
-                MessageBox.Show("Please Add Discount First.");
-            }else
-            {
-                decimal subTotal = decimal.Parse(txtSubTotal.Text);
-                decimal discount = decimal.Parse(txtDiscount.Text);
-
-
-                decimal grandTotal = ((100 - discount) / 100) * subTotal;
-
-                txtGrandTotal.Text = grandTotal.ToString();
-            }
+            CalculateFinalTotal();
         }
 
         private void txtVat_TextChanged(object sender, EventArgs e)
         {
-            string check = txtGrandTotal.Text;
-
-            if (check == "")
-            {
-                MessageBox.Show("Calculate the Discount and set the Grand Total First.");
-            }else
-            {
-                decimal previousGT = decimal.Parse(txtGrandTotal.Text);
-                decimal vat = decimal.Parse(txtVat.Text);
-                decimal granTotalWithVat = ((100 + vat) / 100) * previousGT;
-
-                txtGrandTotal.Text = granTotalWithVat.ToString();
-            }
+            CalculateFinalTotal();
         }
 
         private void txtPaidAmmount_TextChanged(object sender, EventArgs e)
