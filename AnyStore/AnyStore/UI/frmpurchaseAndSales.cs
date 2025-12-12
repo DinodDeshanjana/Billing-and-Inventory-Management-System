@@ -72,6 +72,7 @@ namespace AnyStore.UI
             if (keyword == "")
             {
                 txtNameProduct.Text = "";
+                txtInventory.Text = "";
                 txtRate.Text = "";
                 txtQty.Text = "";
                 return;
@@ -211,9 +212,21 @@ namespace AnyStore.UI
                     transactionDetail.added_by = u.id;
 
 
+                    //
+                    string transactionType = lblTop.Text;
+                    bool x=false;
+
+                    if (transactionType == "Purchase")
+                    {
+                         x = pDAL.IncreaseProduct(transactionDetail.product_id, transactionDetail.qty);
+                    }else if (transactionType == "Sales")
+                    {
+                         x = pDAL.DecreaseProduct(transactionDetail.product_id, transactionDetail.qty);
+                    }
+
                     bool y = tdDAL.InsertTransactionDetail(transactionDetail);
 
-                    success = w && y;
+                    success = w && x && y;
 
                 }
                 

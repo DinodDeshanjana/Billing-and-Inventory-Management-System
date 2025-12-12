@@ -231,7 +231,7 @@ namespace AnyStore.DAL
                 {
                     p.name= dt.Rows[0]["name"].ToString();
                     p.rate = decimal.Parse(dt.Rows[0]["rate"].ToString());
-                    p.qty = decimal.Parse(dt.Rows[0]["rate"].ToString());
+                    p.qty = decimal.Parse(dt.Rows[0]["qty"].ToString());
                 }
             }
             catch (Exception ex)
@@ -280,6 +280,138 @@ namespace AnyStore.DAL
             }
 
             return p;
+        }
+        #endregion
+        #region Method to Get Current Quuntity from the Database based on Product Id
+        public decimal GetProductQty(int ProductID)
+        {
+            SqlConnection conn = new SqlConnection(myconnstrng);
+
+            decimal qty = 0;
+
+            DataTable dt = new DataTable();
+
+            try
+            {
+                string sql = "SELECT qty FROM tbl_products WHERE id =" + ProductID + "";
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+                conn.Open();
+
+                adapter.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    qty = decimal.Parse(dt.Rows[0]["qty"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return qty;
+        }
+        #endregion
+        #region Method to Update Quntity 
+        public bool UpdateQuantity(int ProductID, decimal Qty)
+        {
+            bool success = false;
+
+            SqlConnection conn = new SqlConnection(myconnstrng);
+
+            try
+            {
+                string sql = "UPDATE tbl_products SET qty=@qty WHERE id=@id";
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+
+                cmd.Parameters.AddWithValue("@qty", Qty);
+                cmd.Parameters.AddWithValue("@id", ProductID);
+
+                conn.Open();
+
+                int Rows = cmd.ExecuteNonQuery();
+
+                if (Rows > 0)
+                {
+                    success = true;
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return success;
+        }
+        #endregion
+        #region Method to Increse Product
+        public bool IncreaseProduct(int ProductID, decimal IncreaseQty)
+        {
+            bool success = false;
+
+            SqlConnection conn = new SqlConnection(myconnstrng);
+
+            try
+            {
+                decimal currentQty = GetProductQty(ProductID);
+
+                decimal NewQty = currentQty + IncreaseQty;
+
+                success = UpdateQuantity(ProductID, NewQty);
+            
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return success;
+        }
+        #endregion
+        #region Method to Decrease Product
+        public bool DecreaseProduct(int ProductId, decimal Qty)
+        {
+            bool success = false;
+
+            SqlConnection conn = new SqlConnection(myconnstrng);
+
+            try
+            {
+                decimal currectQty = GetProductQty(ProductId);
+
+                decimal NewQty = currectQty - Qty;
+
+
+                success = UpdateQuantity(ProductId, NewQty);
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return success;
         }
         #endregion
     }
