@@ -18,14 +18,15 @@ namespace AnyStore.DAL
         public bool Insert_Transaction(transactionsBLL t, out int transactionID)
         {
             bool isSuccess = false;
-
             transactionID = -1;
 
             SqlConnection conn = new SqlConnection(myconnstrng);
 
             try
             {
-                string sql = "INSERT INTO tbl_transactions (type,dea_cust_id, grandTotal, transaction_date, tax, discount, added_by) VALUES (@type, @dea_cust_id, @grandTotal, @transaction_date, @tax, discount, @added_by) ";
+                string sql = "INSERT INTO tbl_transactions (type, dea_cust_id, grandTotal, transaction_date, tax, discount, added_by) " +
+                             "VALUES (@type, @dea_cust_id, @grandTotal, @transaction_date, @tax, @discount, @added_by); " +
+                             "SELECT SCOPE_IDENTITY();";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
@@ -39,18 +40,15 @@ namespace AnyStore.DAL
 
                 conn.Open();
 
-                object o = cmd.ExecuteNonQuery();
+                object result = cmd.ExecuteScalar();   // IMPORTANT CHANGE ✔
 
-                if (o != null)
+                if (result != null)
                 {
-                    transactionID = int.Parse(o.ToString());
-                }
-                else
-                {
-                    isSuccess = false;
+                    transactionID = Convert.ToInt32(result);
+                    isSuccess = true;                   // IMPORTANT FIX ✔
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -58,6 +56,7 @@ namespace AnyStore.DAL
             {
                 conn.Close();
             }
+
             return isSuccess;
         }
         #endregion

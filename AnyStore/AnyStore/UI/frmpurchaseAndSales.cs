@@ -174,7 +174,7 @@ namespace AnyStore.UI
 
 
             transaction.dea_cust_id = dc.id;
-            transaction.grandTotal = decimal.Parse(txtGrandTotal.Text);
+            transaction.grandTotal = Math.Round(decimal.Parse(txtGrandTotal.Text),2);
             transaction.transaction_date = DateTime.Now;
             transaction.tax = decimal.Parse(txtVat.Text);
             transaction.discount = decimal.Parse(txtDiscount.Text);
@@ -197,14 +197,14 @@ namespace AnyStore.UI
                 {
                     tranactionDeatilBLL transactionDetail = new tranactionDeatilBLL();
 
-                    string ProductName = txtNameProduct.Text;
-
+                    string ProductName = transactionDT.Rows[i][0].ToString();
                     productsBLL p = pDAL.GetProductIDFromName(ProductName);
-
                     transactionDetail.product_id = p.id;
+
+
                     transactionDetail.rate = decimal.Parse(transactionDT.Rows[i][1].ToString());
                     transactionDetail.qty = decimal.Parse(transactionDT.Rows[i][2].ToString());
-                    transactionDetail.total = decimal.Parse(transactionDT.Rows[i][3].ToString());
+                    transactionDetail.total = Math.Round(decimal.Parse(transactionDT.Rows[i][3].ToString()),2);
 
                     transactionDetail.dea_cust_id = dc.id;
                     transactionDetail.added_date = DateTime.Now;
@@ -215,15 +215,39 @@ namespace AnyStore.UI
 
                     success = w && y;
 
-                    if (success == true)
-                    {
-                        MessageBox.Show("Transaction Completed Successfully.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Transaction Failed.");
-                    }
+                }
+                
 
+                if (success == true)
+                {
+                    scope.Complete();
+
+                    MessageBox.Show("Transaction Completed Successfully.");
+                    dgvAddedProducts.DataSource = null;
+                    dgvAddedProducts.Rows.Clear();
+
+                    txtSearch.Text = "";
+                    txtName.Text = "";
+                    txtEmail.Text = "";
+                    txtContact.Text = "";
+                    txtAddress.Text = "";
+
+                    txtNameProduct.Text = "";
+                    txtInventory.Text = "0";
+                    txtRate.Text = "0";
+                    txtQty.Text = "0";
+
+                    txtSubTotal.Text = "0";
+                    txtDiscount.Text = "0";
+                    txtVat.Text = "0";
+                    txtGrandTotal.Text = "0";
+                    txtPaidAmmount.Text = "0";
+                    txtReturnAmmount.Text = "0";
+
+                }
+                else
+                {
+                    MessageBox.Show("Transaction Failed.");
                 }
 
             }

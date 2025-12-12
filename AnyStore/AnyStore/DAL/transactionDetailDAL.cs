@@ -29,7 +29,7 @@ namespace AnyStore.DAL
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
-                cmd.Parameters.AddWithValue("@producr_id", td.product_id);
+                cmd.Parameters.AddWithValue("@product_id", td.product_id);
                 cmd.Parameters.AddWithValue("@rate", td.rate);
                 cmd.Parameters.AddWithValue("@qty", td.qty);
                 cmd.Parameters.AddWithValue("@total", td.total);
