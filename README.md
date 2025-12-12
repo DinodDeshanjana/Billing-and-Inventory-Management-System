@@ -1,19 +1,20 @@
-# AnyStore - Inventory & Billing Management System
+# AnyStore - Inventory Management System
 
-**AnyStore** is a comprehensive desktop application developed in **C# (.NET Framework)** designed to manage retail store inventories, billing processes, and user management efficiently. It features a robust **SQL Server** database backend to ensure data integrity and fast transaction handling.
+**AnyStore** is a comprehensive desktop application developed in **C# (.NET Framework)** designed to manage retail store inventories, and user management efficiently. It features a robust **SQL Server** database backend to ensure data integrity and fast transaction handling.
 
 ---
 
 ## 📸 Screenshots
 
+### Login Page
+![login](https://github.com/user-attachments/assets/ee5b14a9-84f8-41cf-b95d-3f9ec38f1c87)
+
 ### Admin Dashboard
-![Admin Dashboard](screenshots/dashboard.png)
+<img width="1919" height="1019" alt="Screenshot 2025-12-12 175812" src="https://github.com/user-attachments/assets/74698115-bb11-4a40-b77d-0a84f8cfd161" />
 
-### Purchase & Billing Module
-![Billing System](screenshots/billing.png)
+### Inventory Management (Transaction Logic)
+<img width="1919" height="1021" alt="Screenshot 2025-12-12 175915" src="https://github.com/user-attachments/assets/5fd416d0-4882-4779-8d57-b434b188c29e" />
 
-### Inventory Management
-![Inventory](screenshots/inventory.png)
 
 ---
 
